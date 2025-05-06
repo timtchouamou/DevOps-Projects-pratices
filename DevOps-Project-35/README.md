@@ -145,7 +145,7 @@ To establish the infrastructure required for the DevOps tools setup, virtual mac
     echo "CRI runtime installed successfully"
     ```
 
-    Add Kubernetes APT repository and install required packages:
+    Add Kubernetes APT repository (The Kubernetes Apt repository provides a way to manage and install Kubernetes packages on Linux systems using the apt package manager. It's primarily used to install and upgrade Kubernetes components like kubeadm, kubelet, kubectl, and others. ) and install required packages:
 
     ```bash
     curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
