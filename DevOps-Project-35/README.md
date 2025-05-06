@@ -126,7 +126,7 @@ To establish the infrastructure required for the DevOps tools setup, virtual mac
     sudo sysctl --system
     ```
 
-    **Install CRIO Runtime:**
+    **Install CRIO Runtime:** is an implementation of the Kubernetes CRI (Container Runtime Interface) to enable using OCI (Open Container Initiative) compatible runtimes. It is a lightweight alternative to using Docker as the runtime for kubernetes
 
     ```bash
     sudo apt-get update -y
