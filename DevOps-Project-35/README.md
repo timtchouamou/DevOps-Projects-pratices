@@ -754,6 +754,27 @@ pipeline {
     sudo apt-get install -y adduser libfontconfig1 musl
     wget https://dl.grafana.com/enterprise/release/grafana-enterprise_10.4.2_amd64.deb
     sudo dpkg -i grafana-enterprise_10.4.2_amd64.deb
+
+
+    **or**
+    Install Grafana from the RPM repository
+wget -q -O gpg.key https://rpm.grafana.com/gpg.key
+sudo rpm --import gpg.key
+Create /etc/yum.repos.d/grafana.repo with the following content:
+[grafana]
+name=grafana
+baseurl=https://rpm.grafana.com
+repo_gpgcheck=1
+enabled=1
+gpgcheck=1
+gpgkey=https://rpm.grafana.com/gpg.key
+sslverify=1
+sslcacert=/etc/pki/tls/certs/ca-bundle.crt
+
+To install Grafana OSS, run the following command:
+
+sudo dnf install grafana
+    
     ```
 
 * Once installed, run:
